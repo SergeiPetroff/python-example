@@ -1,0 +1,28 @@
+class Shape:
+    def what_am_i(self):
+        print("I am a figure")
+
+class Square(Shape):
+    square_list = []
+
+    def __init__(self, side):
+        self.side = side
+        self.square_list.append(Square)
+        print("Square is created!")
+
+    def calculate_perimeter(self):
+        return (4 * self.side)
+
+    def change_size(self, num):
+        self.side += num        
+
+
+my_square = Square(1)
+print(my_square.square_list)
+my_square1 = Square(2)
+print(my_square1.square_list)
+
+print(Square.square_list)
+
+#for item in Square.square_list:
+#    print(item.calculate_perimeter())
